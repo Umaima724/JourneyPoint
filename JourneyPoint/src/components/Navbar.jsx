@@ -7,6 +7,7 @@ function Navbar() {
   { name: "Tours", path: "/tours" },
   { name: "Gallery", path: "/gallery" },
   { name: "Contact", path: "/contact" },
+
 ];
 
   return (
@@ -37,7 +38,7 @@ function Navbar() {
 
         {/* Login Button */}
         <NavLink
-          to="/login"
+          to="/"
           className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
         >
           Login
