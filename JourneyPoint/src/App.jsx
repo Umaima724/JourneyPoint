@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
@@ -12,24 +11,68 @@ import Contact from "./pages/Contact";
 import Login from "./pages/Login";
 
 function App() {
-  
-
   return (
-    <>
-      <Navbar />
+    <Routes>
+      {/* Login Page */}
+      <Route path="/" element={<Login />} />
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/tours" element={<Tours />} />
-        <Route path="/gallery" element={<Gallery />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/login" element={<Login />} />
-      </Routes>
+      {/* Main Website */}
+      <Route
+        path="/home"
+        element={
+          <>
+            <Navbar />
+            <Home />
+            <Footer />
+          </>
+        }
+      />
 
-      <Footer /> 
-    </>
-  )
+      <Route
+        path="/about"
+        element={
+          <>
+            <Navbar />
+            <About />
+            <Footer />
+          </>
+        }
+      />
+
+      <Route
+        path="/tours"
+        element={
+          <>
+            <Navbar />
+            <Tours />
+            <Footer />
+          </>
+        }
+      />
+
+      <Route
+        path="/gallery"
+        element={
+          <>
+            <Navbar />
+            <Gallery />
+            <Footer />
+          </>
+        }
+      />
+
+      <Route
+        path="/contact"
+        element={
+          <>
+            <Navbar />
+            <Contact />
+            <Footer />
+          </>
+        }
+      />
+    </Routes>
+  );
 }
 
-export default App
+export default App;
