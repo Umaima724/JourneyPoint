@@ -1,47 +1,28 @@
+import { useNavigate } from "react-router-dom";
 import Button from "../components/Button";
 
 function Login() {
+  const navigate = useNavigate();
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    navigate("/home");
+  };
+
   return (
     <section className="min-h-screen flex items-center justify-center bg-blue-50">
-
       <div className="bg-white shadow-xl rounded-xl p-8 w-full max-w-md">
-
         <h2 className="text-3xl font-bold text-center mb-6">
           Welcome Back
         </h2>
 
-        <form className="space-y-5">
+        <form onSubmit={handleLogin} className="space-y-5">
+          {/* Email input */}
+          {/* Password input */}
 
-          <div>
-            <label className="block mb-2 font-medium">
-              Email
-            </label>
-
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="w-full border rounded-lg px-4 py-3"
-            />
-          </div>
-
-          <div>
-            <label className="block mb-2 font-medium">
-              Password
-            </label>
-
-            <input
-              type="password"
-              placeholder="Enter your password"
-              className="w-full border rounded-lg px-4 py-3"
-            />
-          </div>
-
-          <Button text="Login" />
-
+          <Button text="Login" className="w-full" />
         </form>
-
       </div>
-
     </section>
   );
 }
