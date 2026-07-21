@@ -2,12 +2,12 @@ import { NavLink } from "react-router-dom";
 
 function Navbar() {
   const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Tours", path: "/tours" },
-    { name: "Gallery", path: "/gallery" },
-    { name: "Contact", path: "/contact" },
-  ];
+  { name: "Home", path: "/home" },
+  { name: "About", path: "/about" },
+  { name: "Tours", path: "/tours" },
+  { name: "Gallery", path: "/gallery" },
+  { name: "Contact", path: "/contact" },
+];
 
   return (
     <nav className="bg-white shadow-md">
